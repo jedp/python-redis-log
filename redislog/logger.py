@@ -76,7 +76,7 @@ class RedisLogRecord(logging.LogRecord):
             'username': self.username,
             'funcname': self.funcname,
             'hostname': self.hostname,
-            'exc_info': exc_info
+            'traceback': exc_info
         }
 
 class RedisLogger(logging.getLoggerClass()):
