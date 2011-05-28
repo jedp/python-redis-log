@@ -11,6 +11,6 @@ setup(
       author='Jed Parsons',
       author_email='jed@jedparsons.com',
       url='git://github.com/jedp/python-redis-log.git',
-      packages=['python-redis-log'],
+      packages=['redislog'],
       install_requires=['redis', 'simplejson']
 )
