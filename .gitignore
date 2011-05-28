@@ -1,0 +1,8 @@
+node_modules
+
+config.js
+
+*.pyc
+*.un~
+*.swp
+*.swo
