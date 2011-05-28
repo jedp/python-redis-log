@@ -15,8 +15,8 @@ class RedisFormatter(logging.Formatter):
         data['time'] = data['time'].isoformat()
 
         # stringify exception data
-        if data.get('exc_info'):
-            data['exc_info'] = self.formatException(data['exc_info'])
+        if data.get('traceback'):
+            data['traceback'] = self.formatException(data['traceback'])
     
         return json.dumps(data)
 
