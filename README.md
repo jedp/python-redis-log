@@ -5,8 +5,15 @@ A logging handler for Python that publishes log messages using redis's
 pub/sub system.  You can use this to read or respond to streaming log
 data in real time.
 
-Setup
------
+Installation
+------------
+
+Git clone this repo
+
+Or `easy_install python-redis-log`
+
+Requirements
+------------
 
 You will need:
 
