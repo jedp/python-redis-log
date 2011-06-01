@@ -7,7 +7,8 @@ import inspect
 import logging
 
 def levelAsString(level):
-    return {logging.INFO: 'info',
+    return {logging.DEBUG: 'debug',
+            logging.INFO: 'info',
             logging.WARNING: 'warning', 
             logging.ERROR: 'error', 
             logging.CRITICAL: 'critical', 
