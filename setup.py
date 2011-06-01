@@ -2,8 +2,8 @@
 try:
     from setuptools import setup
 except ImportError:
-    from distutils import setup
-    
+    from distutils.core import setup
+
 setup(
       name='python-redis-log',
       version='0.1.0',
