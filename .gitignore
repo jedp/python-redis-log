@@ -1,6 +1,6 @@
-node_modules
-
-config.js
+build/
+dist/
+python_redis_log.egg-info/
 
 *.pyc
 *.un~
