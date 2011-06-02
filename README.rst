@@ -84,6 +84,6 @@ Contributors
 
 - `Yannis Leidel`_
 
-.. _Yanis Leidel: http://github.com/jezdez
+.. _Yannis Leidel: http://github.com/jezdez
 
 
