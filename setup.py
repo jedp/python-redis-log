@@ -1,18 +1,16 @@
-
 try:
     from setuptools import setup
 except ImportError:
-    from distutils import setup
-    
+    from distutils.core import setup
+
 setup(
       name='python-redis-log',
       version='0.1.0',
       description='Redis pub/sub logging handler for python',
       author='Jed Parsons',
       author_email='jed@jedparsons.com',
-      url='git://github.com/jedp/python-redis-log.git',
+      url='https://github.com/jedp/python-redis-log',
       packages=['redislog'],
-      data_files=[('', ['LICENSE', 'README.md'])],
       license='MIT',
       install_requires=['redis', 'simplejson']
 )
