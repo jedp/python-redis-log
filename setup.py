@@ -5,7 +5,7 @@ except ImportError:
 
 setup(
       name='python-redis-log',
-      version='0.1.0',
+      version='0.1.1',
       description='Redis pub/sub logging handler for python',
       author='Jed Parsons',
       author_email='jed@jedparsons.com',
