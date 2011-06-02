@@ -9,17 +9,19 @@ data in real time.
 Installation
 ------------
 
-The current stable release: ::
+The current stable release ::
 
     easy_install python-redis-log
 
-The latest from `https://github.com/jedp/python-redis-log`_ ::
+The latest from github_ ::
 
     git clone git://github.com/jedp/python-redis-log.git
     cd python-redis-log
     python setup.py build
     python setup.py install --prefix=$HOME  # for example
 
+.. _github: https://github.com/jedp/python-redis-log
+    
 Requirements
 ------------
 
@@ -77,6 +79,11 @@ Andrei Savu's `MongoDB logging handler`_.
 
 .. _MongoDB logging handler: https://github.com/andreisavu/mongodb-log
 
+Contributors
+------------
 
+- `Yannis Leidel`_
+
+.. _Yanis Leidel: http://github.com/jezdez
 
 
