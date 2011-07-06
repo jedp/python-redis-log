@@ -11,6 +11,10 @@ Installation
 
 The current stable release ::
 
+    pip install python-redis-log
+
+or
+
     easy_install python-redis-log
 
 The latest from github_ ::
