@@ -45,6 +45,7 @@ class RedisHandler(logging.Handler):
         """
         Publish record to redis logging channel
         """
-        self.redis_client.publish(self.channel, self.format(record))
-        
-
+        try :
+            self.redis_client.publish(self.channel, self.format(record))
+        except redis.RedisError:
+            pass
