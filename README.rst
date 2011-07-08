@@ -87,7 +87,9 @@ Contributors
 ------------
 
 - `Yannis Leidel`_
+- `Justin Azoff`_
 
-.. _Yannis Leidel: http://github.com/jezdez
+.. _Yannis Leidel: https://github.com/jezdez
+.. _Justin Azoff: https://github.com/JustinAzoff
 
 
