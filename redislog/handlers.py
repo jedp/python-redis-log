@@ -49,3 +49,42 @@ class RedisHandler(logging.Handler):
             self.redis_client.publish(self.channel, self.format(record))
         except redis.RedisError:
             pass
+ 
+class RedisListHandler(logging.Handler):
+    """
+    Publish messages to redis a redis list.
+
+    As a convenience, the classmethod to() can be used as a
+    constructor, just as in Andrei Savu's mongodb-log handler.
+
+    If max_messages is set, trim the list to this many items.
+    """
+
+    @classmethod
+    def to(cklass, key, max_messages=None, host='localhost', port=6379, level=logging.NOTSET):
+        return cklass(key, max_messages, redis.Redis(host=host, port=port), level=level)
+
+    def __init__(self, key, max_messages, redis_client, level=logging.NOTSET):
+        """
+        Create a new logger for the given key and redis_client.
+        """
+        logging.Handler.__init__(self, level)
+        self.key = key
+        self.redis_client = redis_client
+        self.formatter = RedisFormatter()
+        self.max_messages = max_messages
+
+    def emit(self, record):
+        """
+        Publish record to redis logging list
+        """
+        try :
+            if self.max_messages:
+                p = self.redis_client.pipeline()
+                p.rpush(self.key, self.format(record))
+                p.ltrim(self.key, -self.max_messages, -1)
+                p.execute()
+            else:
+                self.redis_client.rpush(self.key,self.format(record))
+        except redis.RedisError:
+            pass
