@@ -44,7 +44,7 @@ Usage
 
     >>> from redislog import handlers, logger
     >>> l = logger.RedisLogger('my.logger')
-    >>> l.addHandler(handlers.RedisHandler.to("my:channel"))
+    >>> l.addHandler(handlers.RedisHandler.to("my:channel", host='localhost', port=6379, password='foobie'))
     >>> l.info("I like pie")
     >>> l.error("Trousers!", exc_info=True)
 
